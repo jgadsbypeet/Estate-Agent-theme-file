@@ -1,0 +1,59 @@
+/*
+Theme Name: TurnerWise
+Theme URI: http://www.turnerwise.co.uk/
+Description: Turner Wise Estate Agents
+Version: 0.1
+Author: James Gadsby Peet
+Author URI: http://www.jamesgadsby.co.uk/
+*/
+
+
+@charset "utf-8";
+/* CSS Document */
+
+.slideshow {
+  position: relative;
+  height: 550px;
+}
+.images {
+  background: url(waveform2.jpg);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300%;
+  -webkit-animation: slideshow 15s linear infinite;
+  -moz-animation:    slideshow 15s linear infinite;
+}
+@-webkit-keyframes slideshow {
+  0%    { left: 0; }
+  100%  { left: -200%; }
+}
+@moz-keyframes slideshow {
+  0%    { left: 0; }
+  100%  { left: -200%; }
+}
+
+.monitor {
+	width: 3rem;
+	height: 250px;
+	background: rgba(102, 102, 102, 0.8);
+	position: relative;
+	float: left;
+	top: 9rem;
+	left: 10rem;
+	z-index: 999;
+-webkit-border-radius: 0px 50px 50px 0px;
+border-radius: 0px 50px 50px 0px;
+border: #333 1px solid;	
+}
+
+.monitor:active {
+	background: rgba(214, 17, 17, 0.8);
+
+}
+
+.img-thumbnail {
+	float: right;
+	margin: 0 0 100px 0;
+}
