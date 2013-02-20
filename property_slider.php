@@ -36,8 +36,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
  <?php endif; ?>
 <?php wp_reset_query(); ?>
-</div>
 
+</div>
      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
 

@@ -1,37 +1,22 @@
     <div class="row">
-      <div class="span6">
-		<a href="#">
-		<img src="http://jamesgadsby.co.uk/turnerwise/wp-content/uploads/2013/02/Head_shot1.jpg" class="img-polaroid img-thumbnail" width="100" height="100px" />
-		<h3>This is a longer blog post title that's all about Clapham</h3></a>
-		<h5 class="small">Posted on 12th January 2012 by <a href="#">Daniel Turner</a></h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
+    
+<?php
+$args = array();
+query_posts($args);
+if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+   		 <div class="span6">
+         <div class="item right">
+	<?php if (is_mobile()) { the_post_thumbnail('slider-mobile-thumb'); } else { the_post_thumbnail(array(100,100,true), array('class' => 'img-thumbnail')); } ?>
+		<h3><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+    	<h5 class="small">Posted on <?php the_time('F jS, Y') ?> by  <?php the_author_posts_link(); ?> </h5>
+		<p><?php the_content('Read more'); ?></p>
+        </div>
         </div>
 
-      <div class="span6">
-		<a href="#">
-		<img src="http://jamesgadsby.co.uk/turnerwise/wp-content/uploads/2013/02/paint_pot.jpg" class="img-polaroid img-thumbnail" width="100" height="100px" />
-		<h3>This is another blog post</h3></a>
-		<h5 class="small">Posted on 12th January 2012 by <a href="#">Daniel Turner</a></h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
-        </div>
+ <?php endwhile; else: ?>
 
-      </div>
+ <p>Sorry, no posts matched your criteria.</p>
 
-    <div class="row">
-      <div class="span6">
-		<a href="#">
-		<img src="http://jamesgadsby.co.uk/turnerwise/wp-content/uploads/2013/02/wandsworth.jpg" class="img-polaroid img-thumbnail" width="100" height="100px" />
-		<h3>Reasons to buy now in Wandsworth</h3></a>
-		<h5 class="small">Posted on 12th January 2012 by <a href="#">Daniel Turner</a></h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
-        </div>
-
-      <div class="span6">
-		<a href="#">
-		<img src="http://jamesgadsby.co.uk/turnerwise/wp-content/uploads/2013/02/bank.jpg" class="img-polaroid img-thumbnail" width="100" height="100px" />
-		<h3>There's never been a quicker mortgage process </h3></a>
-		<h5 class="small">Posted on 12th January 2012 by <a href="#">Daniel Turner</a></h5>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex</p>
-        </div>
-
-      </div>
+ <?php endif; ?>
+<?php wp_reset_query(); ?>

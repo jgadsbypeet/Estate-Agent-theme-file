@@ -45,7 +45,5 @@ Template Name: Home Page v2
 
 <?php include (TEMPLATEPATH . '/Front_page_blog.php'); ?>
 
-[property_overview] 
-
 	</div>
 <?php get_footer(); ?>
