@@ -44,4 +44,16 @@ if ( function_exists( 'add_image_size' ) ) {
 
 register_sidebars(3);
 
+function diww_default_post_content( $content ) {
+	$content = '<p>This is the tag line for the property <strong>£PRICE</strong></p>
+<p><span style="color: #ff0000;">Status</span></p>
+<p>Some more content where you can sell the property</p>
+<p><a href="http://www.bbc.co.uk">Find out more >></a></p>
+';
+	return $content;
+}
+
+add_filter( 'default_content', 'diww_default_post_content' );
+
+
 ?>

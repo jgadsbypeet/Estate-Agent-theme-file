@@ -3,6 +3,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- CSS Styles -->
+<link rel="stylesheet/less" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/style.less" />
+<script src="<?php bloginfo('template_directory'); ?>/js/less-1.3.3.min.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css" media="screen">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/bootstrap.css" media="screen">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/bootstrap-responsive.css" />
